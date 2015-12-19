@@ -82,6 +82,10 @@
 
       mermaid.init();
       Array.prototype.forEach.call(_doc.querySelectorAll('pre code'), hljs.highlightBlock);
+
+      // Enable MathJax.
+      MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+
       autoScroll('body', beforePageYOffset);
       style_header();
     }
